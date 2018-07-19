@@ -1,0 +1,4 @@
+FROM __BASEIMAGE_ARCH__/alpine
+
+__CROSS_COPY qemu-__QEMU_ARCH__-static /usr/bin/
+
