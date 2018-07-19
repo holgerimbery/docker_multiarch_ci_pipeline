@@ -2,12 +2,12 @@
 # docker_multiarch_ci_pipeline
 build system for multi-arch-docker images
 ## supported architectures
-amd64, rm32v6, arm64v8
+amd64, arm32v6, arm64v8
 
 ## USAGE
 ### TRAVIS-CI
 * enable the git-repository in travis-ci
-* create 4 environement variables:
+* create 5 environement variables:
     *   DOCKER_USERNAME     your docker username
     *   DOCKER_PASSWORD     your docker password
     *   REPO                your repo on docker hub
