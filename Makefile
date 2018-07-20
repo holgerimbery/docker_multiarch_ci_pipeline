@@ -16,7 +16,7 @@ arm64v8:
 		sed -i "s|__QEMU_ARCH__|aarch64|g" Dockerfile.arm64v8
 		sed -i  "s/__CROSS_//g" Dockerfile.arm64v8
 		cat Dockerfile.arm64v8
-		wget https://github.com/multiarch/qemu-user-static/releases/download/v2.12.0/qemu-aarch64-static > qemu-aarch64-static
+		wget https://github.com/multiarch/qemu-user-static/releases/download/v2.12.0/qemu-aarch64-static
 		docker build --build-arg ARCH=arm32v8 --no-cache -f Dockerfile.arm64v8 -t $(REPO)/$(IMAGE_NAME):arm64v8-$(IMAGE_VERSION) .
   		docker push $(REPO)/$(IMAGE_NAME):arm64v8-$(IMAGE_VERSION)
 
@@ -26,6 +26,6 @@ arm32v6:
 		sed -i "s|__QEMU_ARCH__|arm|g" Dockerfile.arm32v6
 		sed -i  "s/__CROSS_//g" Dockerfile.arm32v6
 		cat Dockerfile.arm32v6
-		wget https://github.com/multiarch/qemu-user-static/releases/download/v2.12.0/qemu-arm-static > qemu-arm-static
+		wget https://github.com/multiarch/qemu-user-static/releases/download/v2.12.0/qemu-arm-static
 		docker build --build-arg ARCH=arm32v6 --no-cache -f Dockerfile.arm32v6 -t $(REPO)/$(IMAGE_NAME):arm32v6-$(IMAGE_VERSION) .
   		docker push $(REPO)/$(IMAGE_NAME):arm32v6-$(IMAGE_VERSION)
