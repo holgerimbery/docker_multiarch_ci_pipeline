@@ -31,4 +31,4 @@ cp ${ABS_FROM}/.travis.yml ${ABS_DEST}
 
 
 
-echo INFO: please generate 5 variables on travis-ci DOCKER_USERNAME, DOCKER_PASSWORD, REPO, IMAGE_NAME, IMAGE_VERSION
+echo INFO: please generate 4 variables on travis-ci DOCKER_USERNAME, DOCKER_PASSWORD, REPO, IMAGE_NAME
