@@ -10,12 +10,11 @@ amd64, arm32v6, arm64v8
 * edit Dockerfile.cross to meet your needs
 ### TRAVIS-CI
 * enable the git-repository in travis-ci
-* create 5 environement variables:
+* create 4 environement variables:
     *   DOCKER_USERNAME     your docker username
     *   DOCKER_PASSWORD     your docker password
     *   REPO                your repo on docker hub
     *   IMAGE_NAME          the name for the image
-    *   IMAGE_VERSION       version og image, manifest will always be :latest
 
 
 
