@@ -20,12 +20,12 @@ arm64v8:
 		docker build --build-arg ARCH=arm32v8 --no-cache -f Dockerfile.arm64v8 -t $(REPO)/$(IMAGE_NAME):arm64v8-$(IMAGE_VERSION) .
   		docker push $(REPO)/$(IMAGE_NAME):arm64v8-$(IMAGE_VERSION)
 
-arm32v6:
-		cp Dockerfile.cross Dockerfile.arm32v6
-		sed -i "s|__BASEIMAGE_ARCH__|arm32v6|g" Dockerfile.arm32v6
-		sed -i "s|__QEMU_ARCH__|arm|g" Dockerfile.arm32v6
-		sed -i  "s/__CROSS_//g" Dockerfile.arm32v6
-		cat Dockerfile.arm32v6
+arm32v7:
+		cp Dockerfile.cross Dockerfile.arm32v7
+		sed -i "s|__BASEIMAGE_ARCH__|arm32v7|g" Dockerfile.arm32v7
+		sed -i "s|__QEMU_ARCH__|arm|g" Dockerfile.arm32v7
+		sed -i  "s/__CROSS_//g" Dockerfile.arm32v7
+		cat Dockerfile.arm32v7
 		wget https://github.com/multiarch/qemu-user-static/releases/download/v2.12.0/qemu-arm-static
-		docker build --build-arg ARCH=arm32v6 --no-cache -f Dockerfile.arm32v6 -t $(REPO)/$(IMAGE_NAME):arm32v6-$(IMAGE_VERSION) .
-  		docker push $(REPO)/$(IMAGE_NAME):arm32v6-$(IMAGE_VERSION)
+		docker build --build-arg ARCH=arm32v7 --no-cache -f Dockerfile.arm32v7 -t $(REPO)/$(IMAGE_NAME):arm32v7-$(IMAGE_VERSION) .
+  		docker push $(REPO)/$(IMAGE_NAME):arm32v7-$(IMAGE_VERSION)
