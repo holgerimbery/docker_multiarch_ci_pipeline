@@ -22,7 +22,7 @@ amd64, arm32v6, arm64v8
 There is no need to edit
 
 # credits
-based on ideas of the multiarch team https://github.com/multiarch and inspired by Christy Perez https://github.com/clnperez
+based on ideas of the multiarch team https://github.com/multiarch and inspired by Christy Norman https://github.com/clnperez
 
 ## License
 MIT (c) 2017, 2018 Holger Imbery https://github.com/holgerimbery
