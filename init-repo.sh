@@ -18,9 +18,9 @@ ABS_DEST="$(cd $1 && pwd)"
 
 if [[ ! -f  ${ABS_DEST}/Dockerfile.cross ]]; then
 cat << EOF > ${ABS_DEST}/Dockerfile.cross
-FROM __BASEIMAGE_ARCH__/alpine:latest
-
-__CROSS_COPY qemu/qemu-__QEMU_ARCH__-static /usr/bin/
+FROM holgerimbery/alpine:__BASEIMAGE_ARCH__
+ARG ARCH=__BASEIMAGE_ARCH__
+__CROSS_COPY qemu-__QEMU_ARCH__-static /usr/bin/
 EOF
 else
   echo INFO: Dockerfile.cross already exists, skipping

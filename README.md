@@ -2,7 +2,7 @@
 # docker_multiarch_ci_pipeline
 build system for multi-arch-docker images
 ## supported architectures
-amd64, arm32v6, arm64v8
+arm32v6, arm64v8, amd64, i386, ppc64le, s390x 
 
 ## USAGE
 * download the [latest release](https://github.com/holgerimbery/docker_multiarch_ci_pipeline/releases)
