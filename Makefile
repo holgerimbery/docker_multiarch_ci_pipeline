@@ -52,7 +52,7 @@ ppc64le:
 s390x:
 		cp Dockerfile.cross Dockerfile.s390x
 		sed -i "s|__BASEIMAGE_ARCH__|s390x|g" Dockerfile.s390x
-		sed -i "s|__QEMU_ARCH__|arm|g" Dockerfile.s390x
+		sed -i "s|__QEMU_ARCH__|s390x|g" Dockerfile.s390x
 		sed -i  "s/__CROSS_//g" Dockerfile.s390x
 		wget https://github.com/multiarch/qemu-user-static/releases/download/v2.12.0/qemu-s390x-static
 		chmod 755 qemu-s390x-static
